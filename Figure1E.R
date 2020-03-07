@@ -2,7 +2,7 @@
 
 #load the data
 
-map_pop<-read.csv("Map_popdata.csv", header=TRUE, sep=",")
+map_pop<-read.csv("Map_pop_data.csv", header=TRUE, sep=",")
 SvN<-read.csv("SoCalvNorCal_Data.csv", header=TRUE, sep=",")
 egg_di<-read.csv("EggDiameterMeasurements.csv", header=TRUE, sep=",")
 
