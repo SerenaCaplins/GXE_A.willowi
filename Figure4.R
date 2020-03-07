@@ -4,8 +4,8 @@ library(ggplot2)
 
 #get the data
 
-F1_sal<-read.table("C:/Users/SAPCaps/Documents/Projects/Alderia_papers_pics//pics/SoCALvsNorCAL/F1s/Capsule_data.csv", header=TRUE, sep=",")
-SvN<-read.csv("C:/Users/SAPCaps/Documents/Projects/Alderia_papers_pics//pics/SoCALvsNorCAL/SoCalvNorCal_Data.csv", header=TRUE, sep=",")
+F1_sal<-read.table("F1_Capsule_data.csv", header=TRUE, sep=",")
+SvN<-read.csv("SoCalvNorCal_Data.csv", header=TRUE, sep=",")
 
 
 #make a plot for before and after selection by family
