@@ -3,7 +3,7 @@ require(ggplot2)
 
 
 #get the data from map_pop
-map_pop<-read.csv("C:/Users/SAPCaps/Documents/Projects/Alderia_papers_pics//pics/IndivPlast_MappingPops/Date_forR.csv", header=TRUE, sep=",")
+map_pop<-read.csv("Map_pop_data.csv", header=TRUE, sep=",")
 
 #look at mean for individual egg masses
 
