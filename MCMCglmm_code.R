@@ -6,8 +6,8 @@ require(ggplot2)
 
 #load the data
 
-map_pop<-read.csv("C:/Users/SAPCaps/Documents/Projects/Alderia_papers_pics//pics/IndivPlast_MappingPops/Date_forR.csv", header=TRUE, sep=",")
-SvN<-read.csv("C:/Users/SAPCaps/Documents/Projects/Alderia_papers_pics//pics/SoCALvsNorCAL/SoCalvNorCal_Data.csv", header=TRUE, sep=",")
+map_pop<-read.csv("EggDiameterMeasurements.csv", header=TRUE, sep=",")
+SvN<-read.csv("SoCalvNorCal_Data.csv", header=TRUE, sep=",")
 
 #get it all in one dataframe
 
