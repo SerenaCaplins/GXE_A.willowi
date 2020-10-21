@@ -90,18 +90,18 @@ prior <- list(R = list(V = 1, nu = 1),
 
 prior_bin <- list(R = list(V = 1, fix = 1),
                   G = list(G1 = list(V = 1, nu = 1000, alpha.mu = 0, alpha.V = 1),
-                  G2 = list(V = 1, nu = 1000, alpha.mu = 0, alpha.V = 1)))
-                  #G3 = list (V = 1, nu = 1000, alpha.mu = 0, alpha.V = 1)))
+                  G2 = list(V = 1, nu = 1000, alpha.mu = 0, alpha.V = 1),
+                  G3 = list (V = 1, nu = 1000, alpha.mu = 0, alpha.V = 1)))
 
 #to run a nested model in MCMCglmm you need to made the nested factors uniquely identifiable 
 
 HvL$Familyregion<-paste0(HvL$Family, HvL$region)
 
-model_3_animal <- MCMCglmm(Capsule ~ 1 + original, random = ~Family +animal+ region, 
+model_3_animal <- MCMCglmm(Capsule ~ 1 + original, random = ~Family +animal+ Familyregion, 
                     data = HvL, prior=prior, pedigree=pedigree_all, family = "gaussian", 
                     nit = 50000, burnin = 10000, thin = 10) #sample size greater than 1000!
 
-model3.3<- MCMCglmm(eggmass ~ 1 + original, random = ~Family + animal, 
+model3.3<- MCMCglmm(eggmass ~ 1 + original, random = ~Family + animal + Familyregion, 
                      data = HvL, prior=prior_bin, pedigree = pedigree_all, family = "threshold", 
                      nit = 603000, burnin = 10000, thin = 10)#sample size is greater than 1000!
 
